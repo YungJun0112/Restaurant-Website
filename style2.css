@@ -1,0 +1,538 @@
+﻿/* body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+} */
+.content {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+.redStar{
+    color:red;
+}
+/*START OF LOCATION CSS*/
+#location {
+    color: navy;
+    font-size: 25px;
+    width: 150px;
+}
+
+#map {
+    width: 100%;
+    height: 550px;
+}
+#locateus_content{
+    padding-top:150px;
+    height:1000px;
+}
+/*END OF LOCATION CSS*/
+/*START OF FOOTER CSS*/
+.contact_segment .fa {
+    padding: 6px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #EA2164;
+    color: white;
+}
+
+.footer_container {
+    clear: both;
+}
+
+.footer_top {
+    font-family: 'Work Sans', sans-serif;
+    clear: both;
+    align-content: center;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.contact_segment {
+    width: 25%;
+    line-height: 23px;
+}
+.contact_segment h3{
+    font-size:25px;
+}
+
+    .contact_segment ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .contact_segment ul li {
+            border-bottom: 1px solid grey;
+            line-height: 40px;
+        }
+
+    .contact_segment a {
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+    }
+
+        .contact_segment a:hover {
+            font-size: 115%;
+        }
+
+.quicklink_segment {
+    width: 30%;
+    padding-right: 5%;
+}
+.quicklink_segment h3 {
+    font-size: 25px;
+}
+    .quicklink_segment ul {
+        padding-left: 0px;
+    }
+    .quicklink_segment ul li {
+        border-bottom: 1px solid grey;
+        line-height: 40px;
+        list-style-type: none;
+    }
+    .quicklink_segment a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .quicklink_segment a:hover {
+        font-size: 115%;
+        font-weight:700;
+    }
+
+.subscribe_segment {
+    width: 25%;
+    padding-left: 3%;
+}
+.subscribe_segment h3 {
+    font-size: 25px;
+}
+
+    .subscribe_segment form input[type=submit] {
+        background: #c65039;
+        border: none;
+        padding: 6px 18px;
+        text-transform: uppercase;
+        color: white;
+        font-size:21px;
+    }
+    .subscribe_segment form input{
+        padding:6px;
+        font-size:18px;
+    }
+    .footer_bottom {
+        text-align: center;
+        font-size: 16px;
+        color: black;
+        background: linear-gradient(90deg, #755bea, #ff72c0);
+        line-height: 65px;
+        clear: both;
+    }
+.phrases{
+    font-size:22px;
+}
+/*END OF FOOTER CSS*/
+
+/*START OF LOGIN CSS*/
+/*START OF REGISTER CSS*/
+#register_content{
+    height:600px;
+    padding-top:150px;
+}
+#login_content{
+    height:600px;
+    padding-top:150px;
+}
+.container_register_login {
+    background-color: linen;
+    margin: 40px 450px;
+}
+.login_register_title {
+    color: darkblue;
+    font-family: "Franklin Gothic Medium";
+    font-size: 35px;
+}
+.form input[type=text], input[type=password] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size:17px;
+}
+
+.fieldname_register {
+    font-size: 18px;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    color: #424242;
+    position:absolute;
+}
+#login_btn {
+    color: black;
+    font-weight: 700;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    background-color: #FC4E4E;
+    padding: 14px 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+    #login_btn:hover {
+        color: white;
+    }
+#register_btn {
+    color: black;
+    font-weight: 700;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    background-color: #FC4E4E;
+    padding: 14px 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+    #register_btn:hover {
+        color: white;
+    }
+
+.rgt {
+    color: black;
+}
+
+/*END OF LOGIN CSS*/
+/*END OF REGISTER CSS*/
+
+/*START OF PAYMENT CSS*/
+#payment_content {
+    margin-bottom: 125px;
+    padding-top:150px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.payment_title {
+    font-family:Bahnschrift;
+    color:darkblue;
+    font-size: 35px;
+}
+.container_payment {
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color:linen;
+    height:555px;
+}
+.blockLabel{
+    display:block;
+    position:relative;
+}
+.blockLabel input{
+    position:absolute;
+    left:200px;
+    margin-top:5px;
+}
+.payment_form, .address_form{
+    line-height:40px;
+}
+#pay_btn, #reset_btn {
+    font-weight: 500;
+    font-size: 20px;
+    width: 130px;
+    height: 35px;
+    padding: 5px 4px 17px 4px;
+    margin: 8px 0px 8px 0px;
+    cursor: pointer;
+    border-radius: 15px;
+    float:right;
+}
+.payment_form input[type=text], .address_form input[type=text] {
+    height: 22px;
+    font-size: 18px;
+}
+.payment_form input[type=radio]{
+    height:18px;
+    width:18px;
+}
+.payment_form .fa-cc-visa{
+    font-size:27px;
+    color:darkblue;
+}
+.payment_form .fa-cc-mastercard {
+    font-size: 27px;
+    color:orangered;
+}
+.payment_form select{
+    font-size:18px;
+}
+
+.payment_form label, .address_form label {
+    font-size: 18px;
+}
+#pay_btn {
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+}
+#pay_btn:hover{
+    color:black;
+    font-size:115%;
+    font-weight:600;
+}
+#reset_btn {
+    background-color: white;
+    color: black;
+    border-color:cornflowerblue;
+}
+#reset_btn:hover {
+    color: black;
+    font-size: 115%;
+    font-weight:600;
+}
+/*END OF PAYMENT CSS*/
+
+/*START OF CART CSS*/
+#cart_content.content{
+    height:1000px;
+}
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"), url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+.cartpage_title{
+    padding-left:100px;
+}
+#cartpage_content{
+    height:1200px;
+    padding-left:0px;
+    padding-top:150px;
+}
+#cart_content{
+    height:1700px;
+}
+.content_section {
+    margin: 1em;
+} 
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section_header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+.numbering{
+    font-size:22px;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn_primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+    .btn_primary:hover {
+        background-color: #2D9CDB;
+    }
+.foodContent-btn {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    font-size:30px;
+}
+.foodContent {
+    margin: 30px;
+    width:25%;
+}
+
+.foodContent-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.foodContent-img {
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+}
+
+.foodContent-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.foodContent-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+#cart_foodContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 20px;
+    padding-top:150px;
+}
+
+.cart_header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart_column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart_row {
+    display: flex;
+}
+
+.cart_item {
+    width: 45%;
+}
+
+.cart_price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart_quantity {
+    width: 35%;
+}
+
+.cart_item_title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart_item_image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.removeBtn {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+    .removeBtn:hover {
+        background-color: #CC4C4C;
+    }
+
+.cart_quantity_input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.car_row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart_row:last-child .cart-column {
+    border: none;
+}
+
+.cart_total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart_total_title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart_total_price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn_purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}  
+/*END OF CART CSS*/

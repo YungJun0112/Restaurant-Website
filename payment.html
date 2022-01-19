@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Payment</title>
+    <link rel="shortcut icon" type="image/svg" href="./Pics/favicon.svg" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="stylesheet" href="./FontAwesomeReady/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comic+Neue|Sen&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script language="javascript" src="./js/footer.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css" />
+    <script language="javascript" src="js/payment.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div id="divDragonLogo">
+            <a href="./HomePage.html"><img src="./Pics/dragonLogoAdjusted.png" alt="dragonLogo" id="dragonLogo" /></a>
+        </div>
+        <div class="navBar">
+            <a id="buttonRipple" href="./HomePage.html#automaticSlider">HOME</a>
+            <a id="buttonRipple" href="./ProductPageXiaoLongBao.html#" target="secondPage">PRODUCTS</a>
+            <a id="buttonRipple" href="./AboutUsPage.html#" target="secondPage">ABOUT US</a>
+            <a id="buttonRipple" href="./locateus.html" target="secondPage">LOCATE US</a>
+            <script type="text/javascript">
+                const buttons = document.querySelectorAll("a");
+                buttons.forEach((btn) => {
+                    btn.addEventListener("click", function (e) {
+                        let x = e.clientX - 300;
+                        let y = e.clientY - e.target.offsetTop - 55;
+
+                        let ripples = document.createElement("span");
+                        ripples.style.left = x + "px";
+                        ripples.style.top = y + "px";
+                        this.appendChild(ripples);
+
+                        setTimeout(() => {
+                            ripples.remove();
+                        }, 1000);
+                    });
+                });
+            </script>
+        </div>
+        <div class="userAndCart">
+            <a href="./login.html"><i class="fas fa-users"></i></a>
+            <a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </div>
+    <div class="content" id="payment_content">
+        <center>
+            <h1 class="payment_title">
+                Payment Info
+            </h1>
+        </center>
+        <form action="homepage.html" name="paymentForm" method="post" onsubmit="return payment_validation()" ;>
+            <div class="container_payment">
+                <div class="payment_form">
+                    <fieldset>
+                        <legend>
+                            Credit/Debit Card Details
+                        </legend>
+                        <input type="radio" name="cardSelection" value="visa" required/>
+                        <i class="fa fa-cc-visa"></i>
+                        <input type="radio" name="cardSelection" value="Master Card" required/>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <label class="blockLabel">
+                            Cardholder Name<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter the cardholder name" name="cardName" size="30" required onkeyup="inputLettersOnly(this);">
+                        </label>
+                        <label class="blockLabel">
+                            Card Number<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter Card Number" name="cardNo" size="30" maxlength="16" required onkeyup="inputDigitsOnly(this);">
+                        </label>
+                        <label>Expiration Date*:</label>
+                        &ensp;&ensp;
+                        <select required name="expMonth">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select required name="expYear">
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                        <label>&ensp;&ensp;&ensp;&ensp;CVV*:</label>
+                        <input type="text" name="cvv" size=3 maxlength="3" required onkeyup="inputDigitsOnly(this);"> 
+                    </fieldset>
+                </div>
+                <div class="address_form">
+                    <fieldset>
+                        <legend>
+                            Delivery Address
+                        </legend>
+                        <label class="blockLabel">
+                            Name<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter Name" name="name" size="30" required onkeyup="inputLettersOnly(this);">
+                        </label>
+                        <label class="blockLabel">
+                            Phone No<span class="redStar">*</span>:
+                            <input type="text" name="phoneNo" size="30" value="60" maxlength="12" required onkeyup="inputDigitsOnly(this);">
+                        </label>
+                        <label class="blockLabel">
+                            Unit No<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter Unit Number" name="unitNo" size="30" required>
+                        </label>
+                        <label class="blockLabel">
+                            Steet Address<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter Street Address" name="address" size="30" required>
+                        </label>
+                        <label class="blockLabel">
+                            Postcode<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter Postcode" name="postcode" size="30" maxlength="5" required onkeyup="inputDigitsOnly(this);">
+                        </label>
+                        <label class="blockLabel">
+                            City<span class="redStar">*</span>:
+                            <input type="text" placeholder="Enter City" name="city" size="30" required onkeyup="inputLettersOnly(this);">
+                        </label>
+                        <br />
+                    </fieldset>
+                </div>
+                <div>
+                    <input type="submit" value="Pay Now" id="pay_btn" />
+                    <input type="reset" value="Reset" id="reset_btn" onclick="#" />
+                    <br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer>
+        <div class="footer_container">
+            <div class="footer_top">
+                <hr />
+                <div class="column subscribe_segment">
+                    <h3>Our Newletter</h3>
+                    <p class="phrases">Subscibe us now to get the latest news.</p>
+                    <br />
+                    <form action="#" name="subForm" method="GET" onsubmit="return footer_email_validation();">
+                        <input type="text" name="email" />
+                        <input type="submit" value="Subscribe" />
+                    </form>
+                </div>
+                <div class="column quicklink_segment">
+                    <h3>Quick Links</h3>
+                    <ul class="phrases">
+                        <li><a href="./HomePage.html">Home</a></li>
+                        <li><a href="./ProductPageFriedRice.html">Products</a></li>
+                        <li><a href="./AboutUsPage.html">About Us</a></li>
+                        <li><a href="./locateus.html">Locate Us</a></li>
+                        <li><a href="./FeedbackPage.html">Feedback</a></li>
+                        <li><a href="./FAQPage.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="column contact_segment">
+                    <h3>Contact Information</h3>
+                    <ul class="phrases">
+                        <li>
+                            <i class="fa fa-home"></i>1, Jalan 1/149e, Taman Sri Endah 57000
+                            Kuala Lumpur
+                        </li>
+                        <li><i class="fa fa-envelope"></i> dragonnest@gmail.com</li>
+                        <li><i class="fa fa-phone"></i>03-7431234</li>
+                    </ul>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                CopyRight &copy;Dragon Nest. All right reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

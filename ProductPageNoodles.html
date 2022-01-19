@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/svg" href="./Pics/favicon.svg" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="stylesheet" href="./FontAwesomeReady/css/all.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comic+Neue|Sen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script language="javascript" src="./js/footer.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>Product-Noodles</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div id="divDragonLogo">
+        <a href="./HomePage.html"
+          ><img
+            src="./Pics/dragonLogoAdjusted.png"
+            alt="dragonLogo"
+            id="dragonLogo"
+        /></a>
+      </div>
+      <div class="navBar">
+        <a id="buttonRipple" href="./HomePage.html#automaticSlider">HOME</a>
+        <a id="buttonRipple" href="./ProductPageXiaoLongBao.html#" target="secondPage">PRODUCTS</a>
+        <a id="buttonRipple" href="./AboutUsPage.html#" target="secondPage">ABOUT US</a>
+        <a id="buttonRipple" href="./locateus.html" target="secondPage">LOCATE US</a>
+        <script type="text/javascript">
+          const buttons = document.querySelectorAll("a");
+          buttons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              let x = e.clientX - 300;
+              let y = e.clientY - e.target.offsetTop - 55;
+
+              let ripples = document.createElement("span");
+              ripples.style.left = x + "px";
+              ripples.style.top = y + "px";
+              this.appendChild(ripples);
+
+              setTimeout(() => {
+                ripples.remove();
+              }, 1000);
+            });
+          });
+        </script>
+      </div>
+      <div class="userAndCart">
+        <a href="./login.html"><i class="fas fa-users"></i></a>
+        <a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+    <div class="videoBackground">
+      <div class="colorOverlay"></div>
+      <video autoplay loop muted>
+        <source src="./Pics/backgroundVideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="menuLink">
+      <a class="buttonDesign" href="./ProductPageXiaoLongBao.html">XiaoLongBao</a>
+      <a class="buttonDesign" href="./ProductPageNoodles.html">Noodles</a>
+      <a class="buttonDesign" href="./ProductPageFriedRice.html">FriedRice</a>
+    </div>
+    <div class="foodContainer">
+      <input type="radio" name="image" id="noodlesOne" checked />
+      <input type="radio" name="image" id="noodlesTwo" />
+      <input type="radio" name="image" id="noodlesThree" />
+
+      <div class="displayImage"></div>
+      <div class="displayDescription"></div>
+      <div class="selectionButton">
+        
+        <button class="buttonDesign buttonHoverChange" ><a href="cart.html">Order</a></button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer_container" style="position:absolute; top:760px; width:100vw;">
+        <div class="footer_top">
+          <hr />
+          <div class="column subscribe_segment">
+            <h3>Our Newletter</h3>
+            <p class="phrases">Subscibe us now to get the latest news.</p>
+            <br />
+            <form action="#" name="subForm" method="GET" onsubmit="return footer_email_validation();">
+              <input type="text" name="email" />
+              <input type="submit" value="Subscribe" />
+            </form>
+          </div>
+          <div class="column quicklink_segment">
+            <h3>Quick Links</h3>
+            <ul class="phrases">
+              <li><a href="./HomePage.html">Home</a></li>
+              <li><a href="./ProductPageFriedRice.html">Products</a></li>
+              <li><a href="./AboutUsPage.html">About Us</a></li>
+              <li><a href="./locateus.html">Locate Us</a></li>
+              <li><a href="./FeedbackPage.html">Feedback</a></li>
+              <li><a href="./FAQPage.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="column contact_segment">
+            <h3>Contact Information</h3>
+            <ul class="phrases">
+              <li>
+                <i class="fa fa-home"></i>1, Jalan 1/149e, Taman Sri Endah 57000
+                Kuala Lumpur
+              </li>
+              <li><i class="fa fa-envelope"></i> dragonnest@gmail.com</li>
+              <li><i class="fa fa-phone"></i>03-7431234</li>
+            </ul>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          CopyRight &copy;Dragon Nest. All right reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
